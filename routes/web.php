@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\Contador;
+use App\Livewire\Formulario;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,5 +26,9 @@ Route::view('profile', 'profile')
     ->name('profile');
 
 Route::get('/contador', Contador::class);
+Route::get('/formulario', Formulario::class);
+Route::get('/mezclar', function() {
+    return view('mezclar');
+});
 
 require __DIR__.'/auth.php';
