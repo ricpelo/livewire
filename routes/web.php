@@ -1,6 +1,7 @@
 <?php
 
 use App\Livewire\Contador;
+use App\Livewire\Dispara;
 use App\Livewire\Formulario;
 use Illuminate\Support\Facades\Route;
 
@@ -29,6 +30,10 @@ Route::get('/contador', Contador::class);
 Route::get('/formulario', Formulario::class);
 Route::get('/mezclar', function() {
     return view('mezclar');
+});
+
+Route::get('/disparar', function () {
+    return view('disparaescucha');
 });
 
 require __DIR__.'/auth.php';
